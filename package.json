@@ -1,0 +1,26 @@
+{
+  "name": "orbix",
+  "version": "1.0.0",
+  "description": "A Node.js 2D physics engine for simulating celestial body movements, orbits, and dynamics in space.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxMady/OrbiX.git"
+  },
+  "keywords": [
+    "physics"
+  ],
+  "author": "Dux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxMady/OrbiX/issues"
+  },
+  "homepage": "https://github.com/MaxMady/OrbiX#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.18.2"
+  }
+}

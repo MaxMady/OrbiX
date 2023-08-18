@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Nasa;
+  src: url(nasa.ttf) format("truetype");
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  flex-direction: column;
+  font-family: "Nasa", sans-serif;
+}
+
+canvas {
+  border: 1px solid #ffffff;
+  background-color: black;
+  float: right;
+}
+
+h1 {
+  color: #ffffff;
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #252525;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  float: right;
+  width: 50px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+  }
+button:hover {
+  background-color: #363636;
+}
+
+h2 {
+    color: aliceblue;
+    width: 45%;
+    text-align: center;
+}
