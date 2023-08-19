@@ -3,6 +3,7 @@
   src: url(nasa.ttf) format("truetype");
 }
 body {
+  user-select: none;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -17,16 +18,19 @@ canvas {
   border: 1px solid #ffffff;
   background-color: black;
   float: right;
+  flex: 1;
 }
 
 h1 {
-  color: #ffffff;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container {
     display: flex;
     flex-direction: row-reverse;
 }
-button {
+button, #colorPicker {
   margin: 5px;
   padding: 8px 16px;
   font-size: 16px;
@@ -37,17 +41,149 @@ button {
   border-radius: 4px;
   float: right;
   width: 50px;
+  opacity: 35%;
+}
+#colorPicker {
+  background-color: #252525;
+  border: none;
+  padding: 0px 0px 0px 0px;
+  height: 50px;
+  opacity: 100%; 
+}
+input[type="color"]:first-child {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 100px;
+  background: none;
+  margin-bottom: 20px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;border-radius:4px;
+}
+
+input[type="color"]:nth-child(2) {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 100px;
+  background: #f0bc12;
+  outline: none;
+}
+
+input[type="color" i] {
+  border-radius: 4px;
+  border: none;
+  height: 40px;
+  width: 100px;
+  display: block;
 }
 .buttons {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
   }
+  
 button:hover {
   background-color: #363636;
+  opacity: 100%;
 }
 
 h2 {
     color: aliceblue;
     width: 45%;
     text-align: center;
+}
+
+
+
+.createEntity {
+  background-color: #252525;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #161616;
+  flex: 1;
+  justify-content: center;
+  
+}
+
+.btns, #colorPicker {
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+h3 {
+  text-align: center;
+  font-size: x-large;
+  margin-top: auto;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+label {
+  margin-bottom: 5px;
+  
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px;
+  border: none;
+  background-color: #3c3c3c;
+  color: rgb(196, 196, 196);
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+#textInputContainer {
+
+   pointer-events: auto;
+   transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+input[type="text"].active, input[type="number"].active {
+  position: relative;
+  transform: translateY(100%);
+  opacity: 1;
+}
+input[type="number"] {
+  width: 25px;
+  padding: 8px 8px 8px 8px;
+  margin-top: 3px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 3px rgba(7, 7, 7, 0.3), 0px 0px 3px #030303;
+}
+
+.createEntity label {
+  color: #d6d6d6;
+}
+
+.createEn {
+  float: none;
+  margin-left: 30%;
+  color: #d6d6d6;
+  background-color: #161616;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid black;
 }

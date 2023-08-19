@@ -16,22 +16,92 @@
     />
   </head>
   <body>
-    <script src="render.js"></script>
+    <script type="module" src="render.js"></script>
     <h1>OrbiX</h1>
     <div id="container">
       <canvas id="playground"></canvas>
       <div class="buttons">
-        <button id="penButton">
+        <button class="btns" id="penButton">
           <span class="material-symbols-outlined"> edit </span>
         </button>
-        <button id="eraserButton">
+        <button class="btns" id="eraserButton">
           <span class="material-symbols-outlined"> ink_eraser </span>
         </button>
-        <button id="clearButton">
+        <button class="btns" id="clearButton">
           <span class="material-symbols-outlined"> clear_all </span>
         </button>
+        <input class="btns" type="color" id="colorPicker" name="colorPicker" />
+        <div class="createEntity btns">
+          <h3>Create Entity</h3>
+          <form id="entityForm" autocomplete="off">
+            <label for="entityName">Name:</label>
+            <input
+              type="text"
+              id="entityName"
+              name="entityName"
+              required
+              autocomplete="off"
+              placeholder="Entity Name"
+            />
+            <div>
+              <label for="positionX">Position:</label>
+              <input
+                type="number"
+                id="positionX"
+                name="positionX"
+                required
+                value="0"
+              />
+              <input
+                type="number"
+                id="positionY"
+                name="positionY"
+                required
+                value="0"
+              />
+            </div>
+            <div>
+              <label for="velocityX">Velocity:</label>
+              <input
+                type="number"
+                id="velocityX"
+                name="velocityX"
+                required
+                value="0"
+              />
+              <input
+                type="number"
+                id="velocityY"
+                name="velocityY"
+                required
+                value="0"
+              />
+            </div>
+            <div>
+              <label for="accelerationX">Acceleration:</label>
+              <input
+                type="number"
+                id="accelerationX"
+                name="accelerationX"
+                required
+                value="0"
+              />
+              <input
+                type="number"
+                id="accelerationY"
+                name="accelerationY"
+                required
+                value="0"
+              />
+            </div>
+            <button type="submit" class="createEn">Create</button>
+          </form>
+        </div>
       </div>
     </div>
-    <h2>A Node.js 2D physics engine for simulating celestial body movements, orbits, and dynamics in space.</h2>
+    <h2>
+      A Node.js 2D physics engine for simulating celestial body movements,
+      orbits, and dynamics in space.
+    </h2>
   </body>
 </html>

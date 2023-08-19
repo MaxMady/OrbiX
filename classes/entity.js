@@ -1,4 +1,4 @@
-class Entity {
+export class Entity {
     constructor(mass, position, velocity, acceleration, particles) {
         this.mass = mass;
         this.position = position;
@@ -14,4 +14,3 @@ class Entity {
     
 }
 
-module.exports = { Entity }
